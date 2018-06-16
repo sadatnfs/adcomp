@@ -6,7 +6,7 @@ if [ ! -f ~/.R/Makevars ]; then
     echo "CXX = g++ -Wall -pedantic -Werror" > ~/.R/Makevars
 fi
 
-make cran-version
-make cran-check
-make install
+# make cran-version
+# make cran-check
+make install-metis-full
 echo "library(TMB);precompile();runExample(all=TRUE)" | R --slave
