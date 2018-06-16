@@ -11,7 +11,7 @@ jobs:
   include:
 
     - stage: Install package dependencies
-      r: 3.1
+      r: 3.5
       install:
         - ./bin/install_dependencies.sh
       script: true
@@ -23,7 +23,7 @@ jobs:
       script: true
 
     - stage: Install and check the package
-      r: 3.1
+      r: 3.5
       install: true
       script:
         - ./bin/install_and_check.sh
@@ -35,7 +35,7 @@ jobs:
         - ./bin/install_and_check.sh
 
     - stage: Run more checks
-      r: 3.1
+      r: 3.5
       install: true
       script:
         - ./bin/run_more_checks.sh
@@ -47,7 +47,7 @@ jobs:
         - ./bin/run_more_checks.sh
 
     - stage: Run full example suite
-      r: 3.1
+      r: 3.5
       install: true
       script:
         - ./bin/run_full_example_suite.sh
