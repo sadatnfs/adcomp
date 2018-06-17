@@ -7,6 +7,23 @@ cache: packages
 os:
   - linux
 
+
+addons:
+  apt:
+    packages:
+##      - doxygen
+      - pandoc
+      - graphviz
+      - librsvg2-dev
+      - libmetis-dev
+      - libopenblas-base
+      - libblas3
+      - libatlas-base-dev
+      - libblas-dev
+      - libopenblas-dev
+      - liblapack-dev
+      - liblapack3
+
 jobs:
   include:
 
@@ -74,15 +91,3 @@ notifications:
     on_success: never
     on_failure: never
 
-addons:
-  apt:
-    packages:
-##      - doxygen
-      - pandoc
-      - graphviz
-      - librsvg2-dev
-
-env:
-  global:
-  - ENCRYPTION_LABEL: "52ee1037b843"
-  - COMMIT_AUTHOR_EMAIL: "kaskr@dtu.dk"

@@ -62,12 +62,12 @@ SuiteSparse: $(SUITESPARSE).tar.gz # $(METIS).tar.gz
 	cd SuiteSparse; sed -i.backup s/COPTIONS\ =/COPTIONS\ =\ -fPIC/g $(METIS)/Makefile
 	# cd SuiteSparse; cd $(METIS) && make config shared=1 cc=gcc prefix=/opt/metis-build && make library
 	cd SuiteSparse; cd $(METIS); make config cc=gcc ; make --ignore-errors ; make --ignore-errors install
-	cd SuiteSparse/SuiteSparse_config; make all
+	cd SuiteSparse/SuiteSparse_config; make all; make install
+	cd SuiteSparse/AMD; make library; make install
+	cd SuiteSparse/CAMD; make library; make install
 	cd SuiteSparse/CCOLAMD; make library; make install
 	cd SuiteSparse/COLAMD; make library; make install
 	cd SuiteSparse/CHOLMOD; make library; make install
-	cd SuiteSparse/CAMD; make library; make install
-	cd SuiteSparse/AMD; make library; make install
 ## Restore object files so we can make .so
 	cd SuiteSparse; cd SuiteSparse_config; ar vx *.a
 	cd SuiteSparse; cd CCOLAMD/Lib; ar vx *.a
