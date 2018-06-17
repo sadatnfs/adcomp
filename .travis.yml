@@ -14,10 +14,8 @@ apt_packages:
     - graphviz
     - librsvg2-dev
     - libmetis-dev
+    - libmetis5
     - libopenblas-base
-    - libblas3
-    - libatlas-base-dev
-    - libblas-dev
     - libopenblas-dev
     - liblapack-dev
     - liblapack3
