@@ -1,6 +1,6 @@
 language: r
 
-sudo: false
+sudo: required
 
 cache: packages
 
@@ -8,21 +8,19 @@ os:
   - linux
 
 
-addons:
-  apt:
-    packages:
+apt_packages:
 ##      - doxygen
-      - pandoc
-      - graphviz
-      - librsvg2-dev
-      - libmetis-dev
-      - libopenblas-base
-      - libblas3
-      - libatlas-base-dev
-      - libblas-dev
-      - libopenblas-dev
-      - liblapack-dev
-      - liblapack3
+    - pandoc
+    - graphviz
+    - librsvg2-dev
+    - libmetis-dev
+    - libopenblas-base
+    - libblas3
+    - libatlas-base-dev
+    - libblas-dev
+    - libopenblas-dev
+    - liblapack-dev
+    - liblapack3
 
 jobs:
   include:
