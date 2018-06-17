@@ -53,7 +53,7 @@ $(METIS).tar.gz :
 	$(WGET) http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/$(METIS).tar.gz
 
 SuiteSparse: $(SUITESPARSE).tar.gz # $(METIS).tar.gz
-	tar zxfv $(SUITESPARSE).tar.gz
+	tar xzf $(SUITESPARSE).tar.gz
 	# cd SuiteSparse; rm -rf metis-5.1.0
 	# cd SuiteSparse; cp ../$(METIS).tar.gz .
 	# cd SuiteSparse; tar zxfv $(METIS).tar.gz
